@@ -11,13 +11,13 @@ def grad_f(x, y):
     return np.array([x, y])
 
 # FTRL parametreleri
-learning_rate = 1.0  # Öğrenme oranı başlangıcı
-l1 = 0.1             # L1 cezası
-l2 = 0.1             # L2 cezası
-max_iters = 200
+learning_rate = 0.1  # Öğrenme oranı başlangıcı
+l1 = 0.2             # L1 cezası
+l2 = 0.2             # L2 cezası
+max_iters = 500
 
 # Başlangıç noktası
-theta = np.array([4.0, 4.0])
+theta = np.array([4.0, 2.5])
 
 # Birikimli gradyan ve sigma
 grad_accum = np.zeros_like(theta)
@@ -61,9 +61,9 @@ def update_frame(i):
     point.set_data([positions[i][0]], [positions[i][1]])
     return point,
 
-ani = animation.FuncAnimation(fig, update_frame, frames=len(positions), interval=50, blit=True)
+ani = animation.FuncAnimation(fig, update_frame, frames=len(positions), interval=100, blit=True)
 
 # GIF olarak kaydet
-ani.save('ftrl_animation.gif', writer='pillow', fps=40)
+ani.save('ftrl_animation2.gif', writer='pillow', fps=2)
 
-print("Animasyon başarıyla kaydedildi: ftrl_animation.gif")
+print("Animasyon başarıyla kaydedildi: ftrl_animation2.gif")
