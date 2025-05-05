@@ -54,6 +54,6 @@ def update(frame):
 ani = animation.FuncAnimation(fig, update, frames=len(trajectory), init_func=init, interval=50, blit=True)
 
 # Eğer kaydetmek istiyorsan:
-ani.save('lion_optimizer.gif', writer='pillow', fps=40)
+ani.save('lion_animation.gif', writer='pillow', fps=40)
 
 plt.show()
